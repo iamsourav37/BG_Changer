@@ -39,15 +39,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BG Changer"),
+        centerTitle: true,
+        title: Text("BG Changer",
+        style: TextStyle(
+          fontSize: 29.9,
+          fontWeight: FontWeight.bold,
+          color: Colors.tealAccent,
+        ),),
       ),
       body: Container(
         color: currentColor,
         child: Center(
           child: RaisedButton(
             onPressed: _changeColor,
+            splashColor: Colors.black87,
             color: colors[Random().nextInt(colors.length)],
-            elevation: 7.8,
+            elevation: 10.0,
             child: Text(
               "Change it !",
               style: TextStyle(
